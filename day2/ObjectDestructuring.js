@@ -52,4 +52,3 @@ function convertCurrency(amount){
 
 const {EURO, USD} = convertCurrency(100);
 console.log(`USD value: ${USD}, Euro: ${EURO}`);
-
