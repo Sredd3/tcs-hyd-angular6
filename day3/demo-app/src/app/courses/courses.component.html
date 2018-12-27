@@ -1,0 +1,16 @@
+<h1 [textContent]="title"></h1>
+
+<!-- style binding-->
+<div [style.backgroundColor]="!isActive?'red':'green'">
+     
+<ul>
+  <li *ngFor="let course of courses" [style.color]="!isActive?'white':'black'">{{course}} <span (click)="removeItem(course)" style="background-color:black;padding:5px;margin-left:300px;cursor: pointer;"><i class="fa fa-trash"></i></span></li>
+</ul>
+</div>
+
+<div>
+<input type="text" #course (change)="updateCourse(course)" placeholder="Add Course">
+<button class="btn" [class.btn-primary]="isActive" [class.btn-warning]="!isActive" (click)="handleClick($event)">Submit</button>
+</div>
+<!-- class binding-->
+

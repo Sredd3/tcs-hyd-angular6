@@ -1,0 +1,11 @@
+div{
+    margin:0 auto;
+    width:60%;
+}
+li {
+    list-style: none;
+    padding:10px;
+    margin:4px;
+    width: 40%;
+    background-color: orange;
+}

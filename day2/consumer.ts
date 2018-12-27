@@ -1,4 +1,4 @@
-import {sub,sum,product} from './Account';
+import * as mod from './Account';
 
-let result:number = product(34,34);
+let result:number = mod.product(34,34);
 console.log(`The result of addition is ${result}`);
