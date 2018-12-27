@@ -1,0 +1,22 @@
+<ng-container *ngIf="expression; else elseTemplate">
+  <h1>Came inside the truty condition</h1>
+</ng-container>
+<ng-template #elseTemplate>
+  <h2>Came inside the faly condition</h2>
+</ng-template>
+
+<span [ngSwitch]="expression">
+<p *ngSwitchCase="true">
+True
+</p>
+<p *ngSwitchCase="false">
+  False
+</p>
+<p *ngSwitchDefault>
+  Default
+</p>
+</span>
+
+<div [ngClass]="{'alert-warning': !expression, 'alert-danger':expression}">Content</div>
+
+

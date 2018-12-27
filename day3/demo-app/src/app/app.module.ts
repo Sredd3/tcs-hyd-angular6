@@ -5,11 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses/courses.component';
 import { RouterModule } from '@angular/router';
+import { TitlePipe } from './title.pipe';
+import { PanelComponent } from './panel/panel.component';
+import { DirectiveComponent } from './directive/directive.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CoursesComponent
+    CoursesComponent,
+    TitlePipe,
+    PanelComponent,
+    DirectiveComponent
   ],
   imports: [
     BrowserModule,
