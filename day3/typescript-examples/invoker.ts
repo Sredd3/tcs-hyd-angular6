@@ -1,6 +1,8 @@
 import { Course } from './course';
-let angular = new Course('angular', 6,'Brand new course on Angular 6');
-let react = new Course('React', 3);
+import { CourseName } from './CourseNames';
+
+let angular = new Course(CourseName.ANGULAR, 6,'Brand new course on Angular 6');
+let react = new Course(CourseName.REACT, 3);
 /*angular.setTitle('Angular 6')
 angular.setDesc('A brand new course on Angular 6');
 angular.setDurationInDays(5);*/
