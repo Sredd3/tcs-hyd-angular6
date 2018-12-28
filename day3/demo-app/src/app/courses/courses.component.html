@@ -20,7 +20,9 @@
 
 <!--<app-directive></app-directive>-->
 <!-- loading child component-->
-
-<div *ngFor="let product of products" class="row" >
-  <app-child [p]="product" (select)="addToCart($event)" class="col-md-4"></app-child>
+<div class="row">
+  <div *ngFor="let product of products" class="col-md-4" >
+    <!--
+    <app-child [p]="product" (select)="addToCart($event)"></app-child>-->
+  </div>
 </div>

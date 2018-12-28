@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterContentChecked, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-courses',
   templateUrl: './courses.component.html',
   styleUrls: ['./courses.component.css']
 })
-export class CoursesComponent implements OnInit {
+export class CoursesComponent implements OnInit, AfterContentChecked {
 
   constructor() { }
 
@@ -30,6 +30,31 @@ export class CoursesComponent implements OnInit {
   ]
 
   ngOnInit() {
+  }
+
+  ngAfterContentInit(): void {
+    //Called after ngOnInit when the component's or directive's content has been initialized.
+    //Add 'implements AfterContentInit' to the class.
+    console.log('@@ called only once @@');
+  }
+
+  ngAfterContentChecked(): void {
+    //Called after every check of the component's or directive's content.
+    //Add 'implements AfterContentChecked' to the class.
+    console.log('^^ called inside the ngaftercontentchecked function ^^ ');
+    alert('content checked ')
+  }
+
+  ngAfterViewInit(): void {
+    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
+    //Add 'implements AfterViewInit' to the class.
+    console.log('After the child view has been loaded ..')
+  }
+
+  ngAfterViewChecked(): void {
+    //Called after every check of the component's view. Applies to components only.
+    //Add 'implements AfterViewChecked' to the class.
+    console.log('called every time after the view has been loaded ..')
   }
 
   handleClick($event){
