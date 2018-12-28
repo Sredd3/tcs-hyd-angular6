@@ -1,6 +1,6 @@
 <div class="card ">
   <div class="card-header">
-    {{test.name}}
+    {{test.name}}<span style="cursor:pointer" class="pull-right" (click)="removeCourse(test)"><i class="fa fa-trash" aria-hidden="true"></i></span>
   </div>
   <div class="card-body">
     <h4 class="card-title">{{test.name}}</h4>
@@ -9,6 +9,6 @@
     <p class="card-text">{{test.price}}</p>
   </div>
   <div class="card-footer text-muted">
-    <button class="btn" [class.btn-primary]="buttonState" [class.btn-warning]="!buttonState" (click)="addItems(test)">Add to Cart</button>
+    <button class="btn" [class.btn-primary]="buttonState" [class.btn-warning]="!buttonState" (click)="addItems(test)">{{cartText}}</button>
   </div>
 </div>

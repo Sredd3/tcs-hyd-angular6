@@ -58,4 +58,8 @@ export class CoursesComponent {
     console.log(`Fetched the item selected by the user ${item.name}`);
   }
 
+  deleteCourse(item){
+    this.courses.splice(this.courses.indexOf(item),1);
+  }
+
 }
