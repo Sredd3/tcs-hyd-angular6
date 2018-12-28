@@ -13,9 +13,13 @@
 <button class="btn" [class.btn-primary]="isActive" [class.btn-warning]="!isActive" (click)="handleClick($event)">Submit</button>
 </div>
 <!-- class binding-->
-<app-panel>
+<!--<app-panel>
   <ng-container class="header">Heading</ng-container>
   <ng-container class="body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum perferendis odit impedit!</ng-container>
-</app-panel>
+</app-panel>-->
 
-<app-directive></app-directive>
+<!--<app-directive></app-directive>-->
+<!-- loading child component-->
+<div *ngFor="let product of products">
+  <app-child [p]="product" (select)="addToCart($event)"></app-child>
+</div>

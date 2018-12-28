@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { TitlePipe } from './title.pipe';
 import { PanelComponent } from './panel/panel.component';
 import { DirectiveComponent } from './directive/directive.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DirectiveComponent } from './directive/directive.component';
     CoursesComponent,
     TitlePipe,
     PanelComponent,
-    DirectiveComponent
+    DirectiveComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
