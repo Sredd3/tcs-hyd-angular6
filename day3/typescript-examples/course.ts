@@ -14,10 +14,10 @@ export class Course {
         this.desc = desc;
         this.durationInDays = durationInDays;*/
     }
-    get title():string{
+    get title():CourseName{
         return this._title;
     }
-    set title(title:string){
+    set title(title:CourseName){
         this._title = title;
     }
     get desc():string {

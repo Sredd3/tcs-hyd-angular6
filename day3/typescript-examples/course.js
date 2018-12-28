@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+//to transpile the ts file to js file use tsc filename.ts --target es5
 var Course = /** @class */ (function () {
     /*private title:string;
     private desc:string;
