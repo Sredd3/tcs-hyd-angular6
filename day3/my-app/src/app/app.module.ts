@@ -19,6 +19,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
 import { AboutComponent } from './about/about.component';
+import { CourseListComponent } from './course-list/course-list.component';
+import { AddCourseComponent } from './add-course/add-course.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { AboutComponent } from './about/about.component';
     NotFoundComponent,
     NavbarComponent,
     CourseDetailsComponent,
-    AboutComponent
+    AboutComponent,
+    CourseListComponent,
+    AddCourseComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +54,21 @@ import { AboutComponent } from './about/about.component';
       },
       {
         path:'courses',
-        component:CoursesComponent
+        component:CoursesComponent,
+        children:[
+          {
+            path:'',
+            component:CourseListComponent
+          },
+          {
+            path:'add',
+            component:AddCourseComponent
+          },
+          {
+            path:'list',
+            component:CourseListComponent
+          },
+        ]
       },
       {
         path:'about',
