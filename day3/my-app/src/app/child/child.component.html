@@ -3,10 +3,10 @@
     {{test.name}}<span style="cursor:pointer" class="pull-right" (click)="removeCourse(test)"><i class="fa fa-trash" aria-hidden="true"></i></span>
   </div>
   <div class="card-body">
-    <h4 class="card-title">{{test.name}}</h4>
-    <p class="card-text">{{test.duration}}</p>
-    <p class="card-text">{{test.currentBatch}}</p>
-    <p class="card-text">{{test.price}}</p>
+    <h4 class="card-title">Name: {{test.name}}</h4>
+    <p class="card-text">Duration: {{test.duration}}</p>
+    <p class="card-text">Current Batch: {{test.currentBatch}}</p>
+    <p class="card-text">Price: {{test.price}}</p>
   </div>
   <div class="card-footer text-muted">
     <button class="btn" [class.btn-primary]="buttonState" [class.btn-warning]="!buttonState" (click)="addItems(test)">{{cartText}}</button>

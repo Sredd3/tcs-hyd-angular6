@@ -8,10 +8,11 @@ import { Component, OnInit, AfterContentChecked, AfterViewInit } from '@angular/
 export class CoursesComponent implements OnInit, AfterContentChecked {
 
   constructor() { }
-
+ 
   title="Welcome to Learning Management System";
   courses=['Angular','React','Java8','Spring Boot' ];
   isActive = false;
+  imageUrl='http://www.google.com';
   products=[
     {
       title:'IPhone',
@@ -42,7 +43,6 @@ export class CoursesComponent implements OnInit, AfterContentChecked {
     //Called after every check of the component's or directive's content.
     //Add 'implements AfterContentChecked' to the class.
     console.log('^^ called inside the ngaftercontentchecked function ^^ ');
-    alert('content checked ')
   }
 
   ngAfterViewInit(): void {
@@ -72,6 +72,10 @@ export class CoursesComponent implements OnInit, AfterContentChecked {
 
   addToCart(product){
     console.log(`Came inside the addToCart function ${product.title} and desc ${product.desc}`);
+  }
+
+  changeUrl(){
+    this.imageUrl='http://www.facebook.com/classpath';
   }
 
 }
