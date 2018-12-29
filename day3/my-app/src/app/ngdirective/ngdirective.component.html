@@ -12,33 +12,32 @@
 <ng-template #elseTemplate>
     <span class="badge badge-pill badge-success">Normal User</span>
 </ng-template>-->
-{{user}}
-<div [ngSwitch]="user">
+
+<div [ngSwitch]="user.role">
   <div *ngSwitchCase="'Admin'">
     <div class="card">
-        <span class="badge badge-pill badge-success">Admin</span> 
       <div class="card-body">
-        <h4 class="card-title">Title</h4>
-        <p class="card-text">Text</p>
+        <h4 class="card-title"><button class="btn">
+        <span class="badge badge-primary">{{user.role}}</span>
+        </button>{{user.name}}</h4>
+        <p class="card-text">{{user.dept}}</p>
       </div>
     </div>
   </div>
   <div *ngSwitchCase="'Privilige'">
       <div class="card">
-          <span class="badge badge-pill badge-warning">Privilige</span> 
         <div class="card-body">
-          <h4 class="card-title">Title</h4>
-          <p class="card-text">Text</p>
-        </div>
+            <h4 class="card-title">{{user.name}}</h4>
+            <p class="card-text">{{user.dept}}</p>
+            </div>
       </div>
   </div>
   <div *ngSwitchDefault>
       <div class="card">
-          <span class="badge badge-pill badge-danger">Normal</span> 
         <div class="card-body">
-          <h4 class="card-title">Title</h4>
-          <p class="card-text">Text</p>
-        </div>
+            <h4 class="card-title">{{user.name}}</h4>
+            <p class="card-text">{{user.dept}}</p>
+            </div>
       </div>
   </div>
 </div>

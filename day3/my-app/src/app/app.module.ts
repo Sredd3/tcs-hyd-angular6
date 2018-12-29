@@ -12,6 +12,8 @@ import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
 import { DisplayComponent } from './display/display.component';
 import { NgdirectiveComponent } from './ngdirective/ngdirective.component';
+import { PanelComponent } from './panel/panel.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { NgdirectiveComponent } from './ngdirective/ngdirective.component';
     ChildComponent,
     ParentComponent,
     DisplayComponent,
-    NgdirectiveComponent
+    NgdirectiveComponent,
+    PanelComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
