@@ -50,4 +50,9 @@ export class CoursesService {
   removeCourse(item:Course):void{
     this._courses.splice(this._courses.indexOf(item),1);
   }
+
+  getCourseDetails(courseId:number) :string {
+
+    return `${courseId } :::: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, autem soluta at, quam ex eveniet veniam ipsa fugiat mollitia nulla quibusdam voluptatum in similique ipsum dolor praesentium vel laborum deserunt itaque odio recusandae iusto eum. Dolor illo earum minima. Exercitationem?`
+  }
 }
