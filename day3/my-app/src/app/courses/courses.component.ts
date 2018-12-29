@@ -24,7 +24,7 @@ export class CoursesComponent implements OnInit {
     this.courses = this.courseService.courses;
   }
   submitCourse(){
-    this.courseService.addCourse({name:this.newCourse,duration:3,currentBatch:false,price:12000});
+    this.courseService.addCourse({id:23,name:this.newCourse,duration:3,currentBatch:false,price:12000,rating:5.67,startDate:new Date()});
     this.newCourse='';
   }
 

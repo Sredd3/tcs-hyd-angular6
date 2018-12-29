@@ -18,6 +18,7 @@ import { Router, RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
     DetailsComponent,
     NotFoundComponent,
     NavbarComponent,
-    CourseDetailsComponent
+    CourseDetailsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -49,6 +51,10 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
       {
         path:'courses',
         component:CoursesComponent
+      },
+      {
+        path:'about',
+        component:AboutComponent
       },
       {
         path:'courses/:id',

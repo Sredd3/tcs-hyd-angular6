@@ -1,8 +1,7 @@
-<div class="card border-primary mb-3" style="max-width: 18rem;">
+<div class="card border-primary mb-12">
     <div class="card-header">
       <ng-content select=".header"></ng-content>
     </div>
-     {{type === 'warning'}}
     <div class="card-body" [class.text-danger]="type === 'warning'">
       <ng-content select=".body"></ng-content>
     </div>

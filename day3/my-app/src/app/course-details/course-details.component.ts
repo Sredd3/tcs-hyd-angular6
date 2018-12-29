@@ -13,6 +13,8 @@ export class CourseDetailsComponent implements OnInit {
   details:string;
   handle:Subscription;
   courseId:number;
+  title='Angular 6';
+  
   constructor(private courses:CoursesService, private route:ActivatedRoute) { }
 
   ngOnInit() {

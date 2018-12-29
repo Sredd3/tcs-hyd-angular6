@@ -9,36 +9,52 @@ export class CoursesService {
   constructor() { }
   _courses=[
     {
+      id:1,
       name:'Angular',
       duration:5,
       currentBatch:true,
-      price:10000
+      price:10000,
+      rating:5.67766,
+      startDate:new Date(2019,1,12)
     },
     {
+      id:2,
       name:'React',
       duration:4,
       currentBatch:false,
-      price:12000
+      price:12000,
+      rating:7.7766,
+      startDate:new Date(2019,2,10)
+
     },
     {
+      id:3,
       name:'Spring Boot',
       duration:3,
       currentBatch:false,
-      price:20000
+      price:20000,
+      rating:9.34566,
+      startDate:new Date(2019,6,10)
+
     },
     {
+      id:4,
       name:'Webpack',
       duration: 2,
       currentBatch:false,
-      price:5000
+      price:5000,
+      rating:6.44566,
+      startDate:new Date(2019,8,10)
     },
     {
+      id:5,
       name:'ES6',
       duration: 2,
       currentBatch:false,
-      price:8000
+      price:8000,
+      rating:4.456566,
+      startDate:new Date(2019,4,10)
     }
-
   ];
 
   get courses(){return this._courses};

@@ -12,6 +12,8 @@ export class DetailsComponent implements OnInit {
   adipisicing elit. Amet ratione nobis harum 
   corporis veniam illo natus magnam ipsa 
   doloribus recusandae`;
+  title='Angular 6';
+
   constructor() { }
 
   ngOnInit() {
