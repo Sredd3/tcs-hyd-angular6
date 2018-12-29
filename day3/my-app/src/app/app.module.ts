@@ -9,6 +9,9 @@ import { FooterComponent } from './footer/footer.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { CoursesComponent } from './courses/courses.component';
 import { ChildComponent } from './child/child.component';
+import { ParentComponent } from './parent/parent.component';
+import { DisplayComponent } from './display/display.component';
+import { NgdirectiveComponent } from './ngdirective/ngdirective.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { ChildComponent } from './child/child.component';
     FooterComponent,
     PrivacyPolicyComponent,
     CoursesComponent,
-    ChildComponent
+    ChildComponent,
+    ParentComponent,
+    DisplayComponent,
+    NgdirectiveComponent
   ],
   imports: [
     BrowserModule,
