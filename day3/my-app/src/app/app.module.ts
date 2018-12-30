@@ -33,6 +33,9 @@ import { FormatPipe } from './format.pipe';
 import { SortPipe } from './sort.pipe';
 import {HttpClientModule} from '@angular/common/http';
 import { UserComponent } from './user/user.component';
+import { IAppStore, rootReducer } from './IAppStore';
+import {NgRedux, NgReduxModule} from 'ng2-redux';
+import { ReduxDemoComponent } from './redux-demo/redux-demo.component';
 
 
 @NgModule({
@@ -63,7 +66,8 @@ import { UserComponent } from './user/user.component';
     PhoneformatterDirective,
     FormatPipe,
     SortPipe,
-    UserComponent
+    UserComponent,
+    ReduxDemoComponent
   ],
   imports: [
     BrowserModule,
@@ -71,6 +75,7 @@ import { UserComponent } from './user/user.component';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgReduxModule,
     RouterModule.forRoot([
       {
         path:'', 
@@ -125,4 +130,8 @@ import { UserComponent } from './user/user.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(ngRedux:NgRedux<IAppStore>){
+    ngRedux.configureStore(rootReducer, {counter:0});
+  }
+ }
