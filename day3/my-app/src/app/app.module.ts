@@ -26,6 +26,8 @@ import { OneComponent } from './one/one.component';
 import { TwoComponent } from './two/two.component';
 import { ThreeComponent } from './three/three.component';
 import { RformComponent } from './rform/rform.component';
+import { ConfirmNavigationService } from './confirm-navigation.service';
+import { ActivateCheckService } from './activate-check.service';
 
 @NgModule({
   declarations: [
@@ -73,7 +75,8 @@ import { RformComponent } from './rform/rform.component';
           },
           {
             path:'add',
-            component:AddCourseComponent
+            component:AddCourseComponent,
+            canDeactivate:[ConfirmNavigationService]
           },
           {
             path:'list',
@@ -91,7 +94,8 @@ import { RformComponent } from './rform/rform.component';
       },
       {
         path:'courses/:id',
-        component:CourseDetailsComponent
+        component:CourseDetailsComponent,
+        canActivate:[ActivateCheckService]
       },
       {
         path:'state',

@@ -39,4 +39,10 @@ export class RformComponent {
     console.log('came inside the submit button');
     this.form.setErrors({invalidcourseName:"invalid course Name", incorrectpriceformat:true});
   }
+
+  ngOnDestroy(): void {
+    //Called once, before the instance is destroyed.
+    //Add 'implements OnDestroy' to the class.
+    console.log('any clean up activity to be performed should go here ....');
+  }
 }

@@ -1,6 +1,6 @@
 import {  ValidationErrors, FormControl, ValidatorFn, AbstractControl } from '@angular/forms';
 
-export class CustomValidators implements ValidatorFn{
+export class CustomValidators {
 
    static coursenamevalidator(control: AbstractControl): ValidationErrors | null {
         if((control.value as string).indexOf('') > 0){
