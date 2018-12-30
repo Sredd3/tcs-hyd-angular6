@@ -1,9 +1,12 @@
-import {  ValidationErrors, FormControl } from '@angular/forms';
+import {  ValidationErrors, FormControl, ValidatorFn, AbstractControl } from '@angular/forms';
 
-export class CustomValidators {
+export class CustomValidators implements ValidatorFn{
 
-   static coursenamevalidator(coursename: FormControl): ValidationErrors  {
-        if((coursename.value as string).indexOf('') > 0){
+   static coursenamevalidator(control: AbstractControl): ValidationErrors | null {
+        if((control.value as string).indexOf('') > 0){
+            return {invalidcoursename: "Invalid course name"}
+        }
+        if((control.value as string).indexOf('') > 0){
             return {invalidcoursename: "Invalid course name"}
         }
         return null;
