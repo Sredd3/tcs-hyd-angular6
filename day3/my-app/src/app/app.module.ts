@@ -29,6 +29,11 @@ import { RformComponent } from './rform/rform.component';
 import { ConfirmNavigationService } from './confirm-navigation.service';
 import { ActivateCheckService } from './activate-check.service';
 import { PhoneformatterDirective } from './phoneformatter.directive';
+import { FormatPipe } from './format.pipe';
+import { SortPipe } from './sort.pipe';
+import {HttpClientModule} from '@angular/common/http';
+import { UserComponent } from './user/user.component';
+
 
 @NgModule({
   declarations: [
@@ -55,13 +60,17 @@ import { PhoneformatterDirective } from './phoneformatter.directive';
     TwoComponent,
     ThreeComponent,
     RformComponent,
-    PhoneformatterDirective
+    PhoneformatterDirective,
+    FormatPipe,
+    SortPipe,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot([
       {
         path:'', 

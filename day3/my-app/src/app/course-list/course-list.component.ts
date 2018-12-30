@@ -11,6 +11,11 @@ export class CourseListComponent implements OnInit {
 
   constructor(private courseService:CoursesService) { }
 
+  product = {
+    name:'Iphone ',
+    desc:'Awesome phone ....'
+  }
+
   newCourse:string;
   courses:Course[];
   /*submitCourse(courseName){
