@@ -21,6 +21,10 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
 import { AboutComponent } from './about/about.component';
 import { CourseListComponent } from './course-list/course-list.component';
 import { AddCourseComponent } from './add-course/add-course.component';
+import { StateComponent } from './state/state.component';
+import { OneComponent } from './one/one.component';
+import { TwoComponent } from './two/two.component';
+import { ThreeComponent } from './three/three.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +45,11 @@ import { AddCourseComponent } from './add-course/add-course.component';
     CourseDetailsComponent,
     AboutComponent,
     CourseListComponent,
-    AddCourseComponent
+    AddCourseComponent,
+    StateComponent,
+    OneComponent,
+    TwoComponent,
+    ThreeComponent
   ],
   imports: [
     BrowserModule,
@@ -77,6 +85,10 @@ import { AddCourseComponent } from './add-course/add-course.component';
       {
         path:'courses/:id',
         component:CourseDetailsComponent
+      },
+      {
+        path:'state',
+        component:StateComponent
       },
       {
         path:'**',
