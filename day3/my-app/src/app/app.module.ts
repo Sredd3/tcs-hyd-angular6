@@ -28,6 +28,7 @@ import { ThreeComponent } from './three/three.component';
 import { RformComponent } from './rform/rform.component';
 import { ConfirmNavigationService } from './confirm-navigation.service';
 import { ActivateCheckService } from './activate-check.service';
+import { PhoneformatterDirective } from './phoneformatter.directive';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { ActivateCheckService } from './activate-check.service';
     OneComponent,
     TwoComponent,
     ThreeComponent,
-    RformComponent
+    RformComponent,
+    PhoneformatterDirective
   ],
   imports: [
     BrowserModule,

@@ -54,6 +54,22 @@
   <div class="alert alert-danger" *ngIf="price.touched && !price.valid">
       <span class="alert alert-danger" *ngIf="price.errors.required">price is required property</span>
    </div>
+
+   <div class="form-group">
+        <label for="Phone">Phone Number</label>
+        <input 
+            type="text"
+            required 
+            class="form-control"
+            name="phoneNumber"
+            id="phoneNumber"
+            aria-describedby="phoneNumber"
+            placeholder="Phone Number"
+            #phoneNumber="ngModel"
+            ngModel
+            [appPhoneformatter]='45'>
+      </div>
+    
   
    <button 
       type="submit" 
