@@ -9,18 +9,21 @@ import { User } from '../User';
 })
 export class UserComponent implements OnInit {
 
-  private _users:User[];
+  users:User[];
+  newUser:User;
+
   constructor(private userService:UsersService) { }
 
   ngOnInit() {
-    this.userService.fetchAllUsers().subscribe((response)=>{
-      this._users = response.body;
-    })
+    this.userService.fetchAllUsers()
+      .subscribe(response => this.users = response);
   }
 
-
-  get users(){
-    return this._users;
+  saveUser(form:User){
+    let newUser = new User(form.id, form.name, form.username, form.email);
+    this.userService.saveUser(newUser).subscribe(response => this.newUser = response);
   }
 
+  
+  
 }

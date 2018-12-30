@@ -10,7 +10,21 @@ export class UsersService {
 
   constructor(private httpClient:HttpClient) { }
 
-  fetchAllUsers():Observable<HttpResponse<User[]>>{
-    return this.httpClient.get<HttpResponse<User[]>>('https://jsonplaceholder.typicode.com/users');
+  fetchAllUsers():Observable<User[]>{
+    return this.httpClient.get<User[]>('https://jsonplaceholder.typicode.com/users');
   }
+
+  saveUser(user:User):Observable<User>{
+    return this.httpClient.post<User>('https://jsonplaceholder.typicode.com/users',JSON.stringify(user));
+  }
+
+  updateUser(user:User):Observable<User>{
+    return this.httpClient.put<User>('https://jsonplaceholder.typicode.com/users/'+user.id,JSON.stringify(user));
+  }
+
+  deleteUser(user:User):Observable<User>{
+    return this.httpClient.delete<User>('https://jsonplaceholder.typicode.com/users/'+user.id);
+  }
+
+
 }

@@ -113,6 +113,10 @@ import { UserComponent } from './user/user.component';
         component:StateComponent
       },
       {
+        path:'users',
+        component:UserComponent
+      },
+      {
         path:'**',
         component:NotFoundComponent
       }

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.3.3/rxjs.umd.js"></script>
+    <style>
+        div{
+            color:black;
+            padding:20px;
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <div style="margin:0 auto; width:20px; font-size:18px">
+        <button id= "broadcaster">Broadcast</button>
+        <button id= "evenBtn">Even</button>
+        <button id= "oddBtn">Odd</button>
+        <button id= "filterBtn">Filter</button>                        
+        <button id= "unsubscribe">Unsubscribe</button>                        
+    </div>
+    <div style="margin-top:20px">
+        <div id="even" style="width:30%; float:right;background-color:yellow">Even</div>
+        <div id="odd" style="width:30%; float:right;background-color:goldenrod">Odd</div>
+        <div id="filter" style="width:30%; float:right;background-color:tomato">Filter</div>
+    </div>
+    
+</body>
+<script>
+        let subject= new rxjs.Subject();
+        let handle;
+
+        let btn = document.querySelector('#broadcaster');
+
+        btn.addEventListener('click', ()=>{
+            subject.next(Math.round(Math.random()*100));
+        })
+        
+        let evenBtn=document.querySelector("#evenBtn");
+        let oddBtn=document.querySelector("#oddBtn");
+        let filterBtn=document.querySelector("#filterBtn");
+
+        evenBtn.addEventListener('click', ()=>{
+            handle = subject.subscribe((data)=>{
+                let evenDiv = document.querySelector("#even");
+                evenDiv.innerHTML=`${evenDiv.innerHTML} <div>${data}</div>`
+            })
+        });
+
+        unsubscribe.addEventListener('click', ()=>{
+            
+            subject.unsubscribe();
+        })
+
+       /* oddBtn.addEventListener('click', ()=>{
+            subject.observers.filter((data)=> data % 2 !== 0).subscribe((data)=>{
+                let oddDiv = document.querySelector("#odd");
+                oddDiv.innerHTML=`${oddDiv.innerHTML} <div>${data}</div>`
+            })
+        });
+
+        (filterBtn.addEventListener('click', ()=>{
+            subject.observers.filter((data)=> data > 50 ).subscribe((data)=>{
+                let filterDiv = document.querySelector("#filter");
+                filterDiv.innerHTML=`${filterDiv.innerHTML} <div>${data}</div>`
+            })
+        });*/
+
+    </script>
+</html>
