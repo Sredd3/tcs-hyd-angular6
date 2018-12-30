@@ -15,8 +15,8 @@
         ngModel>
   </div>
   <div *ngIf="courseName.touched && !courseName.valid">
-      <span *ngIf="courseName.errors.required">name is required property</span>
-      <span *ngIf="courseName.errors.minlength">Min length is {{courseName.errors.minlength.requiredLength - courseName.errors.minlength.actualLength }}</span>
+      <span class="alert alert-danger" *ngIf="courseName.errors.required">name is required property</span>
+      <span class="alert alert-danger" *ngIf="courseName.errors.minlength">Min length is {{courseName.errors.minlength.requiredLength - courseName.errors.minlength.actualLength }}</span>
    </div>
   <div class="form-group">
     <label for="duration">Duration</label>
@@ -33,9 +33,9 @@
       aria-describedby="duration" 
       placeholder="duration">
   </div>
-  <div *ngIf="duration.touched && !duration.valid">
-      <span *ngIf="duration.errors.required">duration is required property</span>
-      <span *ngIf="duration.errors.minlength">duration length is {{courseName.errors.minlength.requiredLength - courseName.errors.minlength.actualLength }}</span>
+  <div class="alert alert-danger" *ngIf="duration.touched && !duration.valid">
+      <span class="alert alert-danger" *ngIf="duration.errors.required">duration is required property</span>
+      <span class="alert alert-danger" *ngIf="duration.errors.minlength">duration length is {{courseName.errors.minlength.requiredLength - courseName.errors.minlength.actualLength }}</span>
    </div>
   
   <div class="form-group">
@@ -51,8 +51,8 @@
         #price="ngModel"
         ngModel>
   </div>
-  <div *ngIf="price.touched && !price.valid">
-      <span *ngIf="price.errors.required">price is required property</span>
+  <div class="alert alert-danger" *ngIf="price.touched && !price.valid">
+      <span class="alert alert-danger" *ngIf="price.errors.required">price is required property</span>
    </div>
   
    <button 

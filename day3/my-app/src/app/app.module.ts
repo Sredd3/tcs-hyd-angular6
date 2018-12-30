@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
@@ -25,6 +25,7 @@ import { StateComponent } from './state/state.component';
 import { OneComponent } from './one/one.component';
 import { TwoComponent } from './two/two.component';
 import { ThreeComponent } from './three/three.component';
+import { RformComponent } from './rform/rform.component';
 
 @NgModule({
   declarations: [
@@ -49,12 +50,14 @@ import { ThreeComponent } from './three/three.component';
     StateComponent,
     OneComponent,
     TwoComponent,
-    ThreeComponent
+    ThreeComponent,
+    RformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       {
         path:'', 
@@ -75,6 +78,10 @@ import { ThreeComponent } from './three/three.component';
           {
             path:'list',
             component:CourseListComponent
+          },
+          {
+            path:'rform',
+            component:RformComponent
           },
         ]
       },
